@@ -1,0 +1,15 @@
+{
+  "name": "trame-apps-demo",
+  "version": "1.0.0",
+  "description": "Welcome site for trame applications",
+  "scripts": {
+    "dev": "saber",
+    "build": "saber build"
+  },
+  "author": "Kitware Inc.",
+  "license": "BSD",
+  "dependencies": {
+    "saber": "^0.11.7",
+    "saber-theme-tailsaw": "^1.4.3"
+  }
+}

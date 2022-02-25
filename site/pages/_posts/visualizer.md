@@ -1,0 +1,22 @@
+---
+title: ParaView Visualizer
+layout: post
+author: Kitware Inc.
+categories:
+  - trame
+  - paraview
+slug: visualizer
+assets:
+  cover: ./visualizer.jpg
+featured: true
+---
+
+ParaView is an open-source, multi-platform data analysis and visualization application. ParaView users can quickly build visualizations to analyze their data using qualitative and quantitative techniques. The data exploration can be done interactively in 3D or programmatically using ParaView’s batch processing capabilities.
+
+ParaView was developed to analyze extremely large datasets using distributed memory computing resources. It can be run on supercomputers to analyze datasets of petascale size as well as on laptops for smaller data, has become an integral tool in many national laboratories, universities and industry, and has won several awards related to high performance computation.
+
+Visualier is a Web based interface to ParaView.
+
+## Running the application
+
+asdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd fasdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd fasdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd fasdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd fasdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd fasdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd fasdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd fasdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd fasdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd fasdf asd f adsf g sgfh rtyj ty ky ul k ds sf asd f

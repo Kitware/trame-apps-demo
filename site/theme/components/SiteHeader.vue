@@ -1,0 +1,126 @@
+<template>  
+  <div>
+    <header
+      class="flex items-center shadow bg-white border-b h-24 py-4"
+      role="banner"
+    >
+      <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
+        <div class="flex items-center">
+          <saber-link
+            to="/"
+            :title="$siteConfig.title"
+            class="inline-flex items-center"
+          >
+            <img
+              class="h-8 md:h-10 mr-3"
+              src="../assets/img/logo.svg"
+              :alt="$siteConfig.title"
+            />
+  
+            <h1
+              class="text-lg md:text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0"
+            >
+              {{ $siteConfig.title }}
+            </h1>
+          </saber-link>
+        </div>
+  
+        <div class="flex flex-1 justify-end items-center">
+          <SiteSearch v-if="$fetchSearchDatabase" />
+  
+          <nav class="hidden lg:flex items-center justify-end text-lg">
+            <NavLink
+              class="ml-6 text-grey-darker hover:text-blue-dark"
+              v-for="route in $themeConfig.nav"
+              :route="route"
+              :key="route.link"
+            />
+          </nav>
+  
+          <button
+            class="flex justify-center items-center bg-blue-500 border border-blue-500 h-10 px-5 rounded-full lg:hidden focus:outline-none"
+            @click="nav = !nav"
+          >
+            <svg
+              v-if="!nav"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-current text-white h-9 w-4"
+              viewBox="0 0 32 32"
+            >
+              <path
+                d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+              />
+            </svg>
+  
+            <svg
+              v-else
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-current text-white h-9 w-4"
+              viewBox="0 0 36 30"
+            >
+              <polygon
+                points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  
+    <nav
+      :class="{
+        'nav-menu': true,
+        'hidden lg:hidden': !nav,
+        'lg:block': nav
+      }"
+    >
+      <ul class="list-reset my-0">
+        <li class="pl-4">
+          <NavLink
+            class="nav-menu__item hover:text-blue"
+            v-for="route in $themeConfig.nav"
+            :route="route"
+            :key="route.link"
+          />
+        </li>
+      </ul>
+    </nav>
+  </div>
+</template>
+
+<script>
+import NavLink from './NavLink';
+import SiteSearch from './SiteSearch';
+export default {
+  components: {
+    NavLink: NavLink,
+    SiteSearch: SiteSearch
+  },
+  data: function data() {
+    return {
+      nav: false
+    };
+  }
+};
+</script>
+
+<style>
+.nav-menu {
+  background-color: #edf2f7;
+  padding-bottom: 0.5rem;
+  padding-top: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  width: auto;
+}
+
+.nav-menu__item {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: #2d3748;
+  font-size: .925rem;
+}
+</style>
