@@ -1,10 +1,10 @@
-# sandtank-ml:
-#   app: sandtank_ml
+sandtank-ml:
+  app: trame-sandtank-ml
 sandtank-xai:
   app: trame-sandtank-xai
 mnist:
   app: trame-mnist
-# xaitk:
-#   app: xaitk_saliency_demo
-# visualizer:
-#   app: pv_visualize
+xaitk:
+  app: xaitk-saliency-demo
+visualizer:
+  app: pv-visualizer
