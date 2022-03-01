@@ -8,3 +8,20 @@ xaitk:
   app: xaitk-saliency-demo
 visualizer:
   app: pv-visualizer
+  cmd:
+    - /opt/paraview/bin/pvpython
+    - -m
+    - paraview.apps.trame
+    - --venv
+    - /deploy/server/venv
+    - --trame-app
+    - pv_visualizer
+    - --host
+    - ${host}
+    - --port
+    - ${port}
+    - --authKey
+    - ${secret}
+    - --server
+    - --data
+    - /data
